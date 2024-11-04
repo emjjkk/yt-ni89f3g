@@ -1,0 +1,365 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, white, rgb(230, 230, 230));
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+.outer {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* Space between left, center, and right */
+    align-items: center;
+    /* Center items vertically */
+    padding: 1rem 5rem;
+    width: 100%;
+}
+
+/* Left section */
+.header-l {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header-l i {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Center section for logo */
+.header-c {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Center logo horizontally */
+}
+
+.logo {
+    height: 70px;
+    /* Adjust as needed */
+    object-fit: contain;
+}
+
+/* Right section for navigation links */
+.header-r {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.navlink {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #333;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Style for the cart badge */
+.navlink span {
+    background: #000000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 12px;
+    position: absolute;
+    right: -25px;
+}
+
+.main {
+    display: flex;
+    align-items: last baseline;
+    padding: 0px 5rem;
+    width: 100%;
+    min-height: 105vh;
+}
+
+/* Left Section - Car Details */
+.main-l {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tag {
+    color: white;
+    background-color: #000000;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+.name {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1.3;
+}
+
+.desc {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #666;
+    width: 300px;
+}
+
+.price {
+    font-size: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-container button {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 100px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-container button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-container button:first-child:hover {
+    background-color: #004a99;
+    color: white;
+}
+
+.btn-container button:last-child {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Center Section - Car Image */
+.main-c {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car {
+    position: absolute;
+    width: 70%;
+    bottom: -120px;
+    transform: rotate(90deg);
+    /* Rotate the car image 90 degrees */
+}
+
+/* Right Section - Performance Stats */
+.main-r {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+}
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    height: fit-content;
+    position: relative;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div5 {
+    grid-area: 3 / 1 / 3 / 3;
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url('https://cdn-ds.com/blogs-media/sites/346/2021/04/12192704/2021-Nissan-GTR_B_o.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+}
+
+.stat{
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    border-radius: 10px;
+}
+
+.stat i{
+    font-size: 1rem;
+    padding: 12px;
+    background: linear-gradient(45deg, white, transparent);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.a{
+    color:blue;
+}
+.b{
+    color:rgb(197, 0, 197);
+}
+.c{
+    color:rgb(0, 255, 0);
+}
+.d{
+    color:yellow;
+}
+
+.stat h6{
+    font-size: 0.9rem;
+}
+
+.stat p{
+    font-size: 0.6rem;
+    color: grey;
+}
+
+
+/* Adjustments for tablet screens */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    .main {
+        padding: 0 2rem;
+    }
+
+    .main-c .car {
+        width: 80%;
+    }
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+
+    body{
+        overflow-y: scroll;
+    }
+
+    .header {
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    .header-c{
+        justify-content: flex-end;
+    }
+
+    .header-r{
+        display: none;
+    }
+
+    /* Stacking main sections vertically on mobile */
+    .main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0px 10px;
+    }
+
+    .main-l,
+    .main-c,
+    .main-r {
+        flex: 1;
+        margin: 0px;
+    }
+
+    .main-l{
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-container{
+        width: 100%;
+    }
+
+    button{
+        width: 100%;
+    }
+
+    .main-c .car {
+        position: relative;
+        width: 90%;
+        bottom: -40px;
+        transform: rotate(0deg);
+    }
+
+    .btn-container {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .parent{
+        margin-top: 60px;
+        width: 80vw;
+    }
+}
+
+
+
+
+.u-fade-type-left{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.u-fade-type-left.is-active{
+    transition: 1s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+.u-fade-type-right{
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.u-fade-type-right.is-active{
+    transition: 1s;
+    transform: translateX(0);
+    opacity: 1;
+}
